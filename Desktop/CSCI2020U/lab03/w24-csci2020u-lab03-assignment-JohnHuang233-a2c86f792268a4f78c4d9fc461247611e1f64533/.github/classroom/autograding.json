@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Test student code",
+      "setup": "chmod +x mvnw",
+      "run": "./mvnw test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Verify test file is untouched",
+      "setup": "",
+      "run": "md5sum src/test/java/TestStudentResource.java",
+      "input": "",
+      "output": "6d9f4646d663858f4092cbfecb46bf6f",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Test the CSV file",
+      "setup": "",
+      "run": "cat src/main/resources/students.csv | tr --delete '\\r' | md5sum",
+      "input": "",
+      "output": "938ecc5fadfcc4fe58b51ca20767cdca",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test the XML file",
+      "setup": "",
+      "run": "cat src/main/resources/students.xml | tail -n +2 | sed -e 's/ //g' | tr --delete '\\n' | tr --delete '\\r' | md5sum",
+      "input": "",
+      "output": "a43624ba349a8af3d04df8d90b40bc6a",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test the JSON file",
+      "setup": "",
+      "run": "cat src/main/resources/students.json | sed -e 's/ //g' | tr --delete '\\n' | tr --delete '\\r' | md5sum",
+      "input": "",
+      "output": "f31f06a5a30b4e7bb51085852e3e0c8c",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Test the XML header",
+      "setup": "",
+      "run": "cat src/main/resources/students.xml | head -n 1 | grep -e 'version=\"1.0\"' | grep -ie 'encoding=\"utf-8\"'",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 0
+    },
+    {
+      "name": "Testing the MIME types",
+      "setup": "",
+      "run": "git grep -q --all-match --no-index -e 'Produces(.application/json.)' -e 'Produces(.text/csv.)' -e 'Produces(.application/xml.)' src/**/StudentResource.java",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    },
+    {
+      "name": "Testing endpoints",
+      "setup": "",
+      "run": "git grep -q --all-match --no-index -e 'Path(./json.)' -e 'Path(./xml.)' -e 'Path(./csv.)' src/**/StudentResource.java",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 1
+    }
+  ]
+}
