@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Run website suite",
+      "setup": "(sudo apt update && sudo apt install nodejs npm && npm --prefix ./client install ./client) > /dev/null",
+      "run": "cd client && npm run test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Verify test files",
+      "setup": "",
+      "run": "cat client/cypress/e2e/*.cy.js | sha256sum",
+      "input": "",
+      "output": "937c73fe01ce208936989d7a1d3ba866afbcfe2027b81c32219fea49313291bb ",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
