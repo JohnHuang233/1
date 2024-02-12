@@ -1,0 +1,22 @@
+{
+  "name": "lab04-template",
+  "version": "1.0.0",
+  "description": "Lab 4 for CSCI 2020U",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OntarioTech-CS-program/lab04-template.git"
+  },
+  "author": "Liam Major",
+  "license": "Nope",
+  "bugs": {
+    "url": "https://github.com/OntarioTech-CS-program/lab04-template/issues"
+  },
+  "homepage": "https://github.com/OntarioTech-CS-program/lab04-template#readme",
+  "dependencies": {
+    "cypress": "^12.5.1",
+    "rgb-hex": "^4.0.0"
+  }
+}

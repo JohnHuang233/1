@@ -1,0 +1,27 @@
+* {
+    font-size: 16px;
+    margin: 0.16rem;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: separate;
+}
+.green
+{
+    background-color: #00ff00;
+}
+.red
+{
+    background-color: #ff0000;
+}
+.blue
+{
+    background-color: #0000ff;
+}
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+/* TO DO ... */

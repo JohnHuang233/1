@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>Ryan Gosling</name>
+        <id>100000000</id>
+        <gpa>4.3</gpa>
+    </student>
+    <student>
+        <name>Keanu Reeves</name>
+        <id>100000001</id>
+        <gpa>2.9</gpa>
+    </student>
+    <student>
+        <name>Richard Dean Anderson</name>
+        <id>100000002</id>
+        <gpa>2.7</gpa>
+    </student>
+    <student>
+        <name>Brad Pitt</name>
+        <id>100000003</id>
+        <gpa>3.9</gpa>
+    </student>
+    <student>
+        <name>Ed Norton</name>
+        <id>100000004</id>
+        <gpa>2.2</gpa>
+    </student>
+    <student>
+        <name>Helena Bonham Carter</name>
+        <id>100000005</id>
+        <gpa>2.0</gpa>
+    </student>
+</students>
